@@ -19,7 +19,7 @@ OUTPUT_DIR = PROJECT_DIR / "made videos"
 TEMP_DIR = PROJECT_DIR / "TempVideos"
 
 
-def load_config(config_path: Path) -> tuple[str, bool]:
+def load_config(config_path: Path) -> tuple[list[str], bool]:
     try:
         config = json.loads(config_path.read_text(encoding="utf-8"))
     except FileNotFoundError as error:
@@ -33,11 +33,18 @@ def load_config(config_path: Path) -> tuple[str, bool]:
     if not isinstance(config, dict):
         raise SystemExit(f"Expected a JSON object in {config_path}.")
 
-    video_url = config.get("video_url")
-    if not isinstance(video_url, str) or not video_url.strip():
+    video_urls = config.get("video_url")
+    if isinstance(video_urls, str):
+        video_urls = [video_urls]
+    if not isinstance(video_urls, list) or not video_urls:
         raise SystemExit(
-            f"Set a non-empty 'video_url' value in {config_path}."
+            f"Set 'video_url' to a non-empty URL or array of URLs in {config_path}."
         )
+    if any(not isinstance(url, str) or not url.strip() for url in video_urls):
+        raise SystemExit(
+            f"Every 'video_url' entry must be a non-empty string in {config_path}."
+        )
+    video_urls = [url.strip() for url in video_urls]
 
     skip_ffmpeg = config.get("skip_ffmpeg", False)
     if not isinstance(skip_ffmpeg, bool):
@@ -45,7 +52,7 @@ def load_config(config_path: Path) -> tuple[str, bool]:
             f"'skip_ffmpeg' must be true or false in {config_path}."
         )
 
-    return video_url.strip(), skip_ffmpeg
+    return video_urls, skip_ffmpeg
 
 
 def safe_filename(title: Any) -> str:

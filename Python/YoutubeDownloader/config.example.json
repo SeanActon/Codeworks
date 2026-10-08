@@ -1,4 +1,7 @@
 {
-  "video_url": "https://www.youtube.com/watch?v=VIDEO_ID",
+  "video_url": [
+    "https://www.youtube.com/watch?v=VIDEO_ID",
+    "https://www.youtube.com/watch?v=ANOTHER_VIDEO_ID"
+  ],
   "skip_ffmpeg": false
 }

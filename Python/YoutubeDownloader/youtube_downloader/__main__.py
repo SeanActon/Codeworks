@@ -10,10 +10,11 @@ CONFIG_PATH = PROJECT_DIR / "config.json"
 
 
 def main() -> None:
-    video_url, skip_ffmpeg = load_config(CONFIG_PATH)
-    output_paths = download_video(video_url, skip_ffmpeg)
-    for output_path in output_paths:
-        print(f"Video saved to: {output_path}")
+    video_urls, skip_ffmpeg = load_config(CONFIG_PATH)
+    for video_url in video_urls:
+        output_paths = download_video(video_url, skip_ffmpeg)
+        for output_path in output_paths:
+            print(f"Video saved to: {output_path}")
 
 
 if __name__ == "__main__":

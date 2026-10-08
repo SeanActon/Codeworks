@@ -11,7 +11,7 @@ Download YouTube videos or playlists with `yt-dlp`, then optionally convert them
    python -m pip install -r requirements.txt
    ```
 
-3. Copy `config.example.json` to `config.json` and set `video_url` to a YouTube video or playlist. `config.json` is ignored by Git.
+3. Copy `config.example.json` to `config.json` and set `video_url` to a YouTube video or playlist, or an array of video and playlist URLs. `config.json` is ignored by Git.
 4. Run the downloader from the project folder:
 
    ```powershell
