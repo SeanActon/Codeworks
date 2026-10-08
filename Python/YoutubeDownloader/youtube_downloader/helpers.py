@@ -14,8 +14,7 @@ from typing import Any
 import yt_dlp
 
 
-PROJECT_DIR = Path(__file__).resolve().parent
-CONFIG_PATH = PROJECT_DIR / "config.json"
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_DIR / "made videos"
 TEMP_DIR = PROJECT_DIR / "TempVideos"
 
@@ -61,9 +60,7 @@ def safe_filename(title: Any) -> str:
     return filename
 
 
-def run_ffmpeg_with_progress(
-    command: list[str], duration: float | None
-) -> None:
+def run_ffmpeg_with_progress(command: list[str], duration: float | None) -> None:
     progress_queue: queue.Queue[str | None] = queue.Queue()
     started_at = time.monotonic()
 
@@ -109,9 +106,7 @@ def run_ffmpeg_with_progress(
         now = time.monotonic()
         elapsed_seconds = now - started_at
         if now - last_display_at >= 1:
-            elapsed_label = time.strftime(
-                "%H:%M:%S", time.gmtime(elapsed_seconds)
-            )
+            elapsed_label = time.strftime("%H:%M:%S", time.gmtime(elapsed_seconds))
             stalled_seconds = now - last_update_at
             if stalled_seconds >= 30:
                 status = f"no progress update for {int(stalled_seconds)}s"
@@ -129,9 +124,7 @@ def run_ffmpeg_with_progress(
                     flush=True,
                 )
             else:
-                output_label = time.strftime(
-                    "%H:%M:%S", time.gmtime(output_seconds)
-                )
+                output_label = time.strftime("%H:%M:%S", time.gmtime(output_seconds))
                 print(
                     f"\rFFmpeg output {output_label} "
                     f"| {elapsed_label} elapsed | {status}",
@@ -373,14 +366,3 @@ def download_video(video_url: str, skip_ffmpeg: bool = False) -> list[Path]:
         shutil.rmtree(run_temp_dir)
 
     return output_paths
-
-
-def main() -> None:
-    video_url, skip_ffmpeg = load_config(CONFIG_PATH)
-    output_paths = download_video(video_url, skip_ffmpeg)
-    for output_path in output_paths:
-        print(f"Video saved to: {output_path}")
-
-
-if __name__ == "__main__":
-    main()
