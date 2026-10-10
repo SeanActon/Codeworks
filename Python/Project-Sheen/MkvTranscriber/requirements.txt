@@ -1,0 +1,3 @@
+faster-whisper
+av<19
+tqdm

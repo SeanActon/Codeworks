@@ -1,0 +1,13 @@
+{
+  "input_paths": [],
+  "model": "small",
+  "device": "auto",
+  "compute_type": "auto",
+  "language": null,
+  "output_dir": "transcripts",
+  "workers": 1,
+  "output_formats": [
+    "txt",
+    "srt"
+  ]
+}

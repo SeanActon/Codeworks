@@ -1,0 +1,499 @@
+{
+  "show_name": "Life Is Worth Living",
+  "tvdb_slug": "life-is-worth-living",
+  "season_order": "aired",
+  "source": "https://www.thetvdb.com/series/life-is-worth-living",
+  "seasons": [
+    {
+      "season_number": 1,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "War as a Judgment of God"
+        },
+        {
+          "episode_number": 2,
+          "title": "How Mothers are Made"
+        },
+        {
+          "episode_number": 3,
+          "title": "The Philosophy of Communism"
+        },
+        {
+          "episode_number": 4,
+          "title": "Knowing & Loving"
+        },
+        {
+          "episode_number": 5,
+          "title": "Teenagers"
+        },
+        {
+          "episode_number": 6,
+          "title": "Character Building"
+        },
+        {
+          "episode_number": 7,
+          "title": "Something Higher"
+        },
+        {
+          "episode_number": 8,
+          "title": "Woman at the Well"
+        },
+        {
+          "episode_number": 9,
+          "title": "Pain & Suffering"
+        },
+        {
+          "episode_number": 10,
+          "title": "Psychology of the Irish"
+        }
+      ]
+    },
+    {
+      "season_number": 2,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "First Words"
+        },
+        {
+          "episode_number": 2,
+          "title": "Nurses & Doctors"
+        },
+        {
+          "episode_number": 3,
+          "title": "Liberal or Reactionary"
+        },
+        {
+          "episode_number": 4,
+          "title": "The Inferiority Complex"
+        },
+        {
+          "episode_number": 5,
+          "title": "Our Lady of Fatima"
+        },
+        {
+          "episode_number": 6,
+          "title": "Content with Sawdust Brains?"
+        },
+        {
+          "episode_number": 7,
+          "title": "Altruism: The Evolution of Love"
+        },
+        {
+          "episode_number": 8,
+          "title": "Nice People"
+        },
+        {
+          "episode_number": 9,
+          "title": "Why Work is Boring"
+        },
+        {
+          "episode_number": 10,
+          "title": "Education"
+        },
+        {
+          "episode_number": 11,
+          "title": "Women Who Don't Fail"
+        },
+        {
+          "episode_number": 12,
+          "title": "Social Problem"
+        },
+        {
+          "episode_number": 13,
+          "title": "Prayer"
+        },
+        {
+          "episode_number": 14,
+          "title": "Three Times a Nation's History"
+        }
+      ]
+    },
+    {
+      "season_number": 3,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "Babies & Children"
+        },
+        {
+          "episode_number": 2,
+          "title": "Is America's Religion Religious?"
+        },
+        {
+          "episode_number": 3,
+          "title": "The Hell There Is"
+        },
+        {
+          "episode_number": 4,
+          "title": "The Glory of the Soldier"
+        },
+        {
+          "episode_number": 5,
+          "title": "Angels"
+        },
+        {
+          "episode_number": 6,
+          "title": "Lesson One in Economics"
+        },
+        {
+          "episode_number": 7,
+          "title": "The Meaning of Love"
+        },
+        {
+          "episode_number": 8,
+          "title": "Macbeth"
+        },
+        {
+          "episode_number": 9,
+          "title": "Freedom"
+        },
+        {
+          "episode_number": 10,
+          "title": "The Training of Children"
+        },
+        {
+          "episode_number": 11,
+          "title": "Human Passion"
+        },
+        {
+          "episode_number": 12,
+          "title": "The Greatest Trial in History"
+        },
+        {
+          "episode_number": 13,
+          "title": "Lullaby of Coexistence"
+        },
+        {
+          "episode_number": 14,
+          "title": "Hope for a Wounded World"
+        }
+      ]
+    },
+    {
+      "season_number": 4,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "Effect on Behavior"
+        },
+        {
+          "episode_number": 2,
+          "title": "How to Compare World Religions"
+        },
+        {
+          "episode_number": 3,
+          "title": "Is Neurosis the Stepchild of American Culture?"
+        },
+        {
+          "episode_number": 4,
+          "title": "Sympathy for the Mentally Sick"
+        },
+        {
+          "episode_number": 5,
+          "title": "The True Meaning of Christmas"
+        },
+        {
+          "episode_number": 6,
+          "title": "How to Think"
+        },
+        {
+          "episode_number": 7,
+          "title": "What Has Happened to Politeness?"
+        },
+        {
+          "episode_number": 8,
+          "title": "Why Do People Laugh?"
+        },
+        {
+          "episode_number": 9,
+          "title": "Anatomy of Melancholy"
+        },
+        {
+          "episode_number": 10,
+          "title": "Is Capital Always Right? Is Labor Always Right?"
+        },
+        {
+          "episode_number": 11,
+          "title": "Glory of Science"
+        },
+        {
+          "episode_number": 12,
+          "title": "Do We Talk Too Much?"
+        },
+        {
+          "episode_number": 13,
+          "title": "Message to Youth"
+        },
+        {
+          "episode_number": 14,
+          "title": "Is Self Expression Always Right?"
+        },
+        {
+          "episode_number": 15,
+          "title": "Courtship"
+        }
+      ]
+    },
+    {
+      "season_number": 5,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "How to Improve Your Mind"
+        },
+        {
+          "episode_number": 2,
+          "title": "Psychoanalytic Couch"
+        },
+        {
+          "episode_number": 3,
+          "title": "The Call of the Desert"
+        },
+        {
+          "episode_number": 4,
+          "title": "The Man Who Knew Communism Best"
+        },
+        {
+          "episode_number": 5,
+          "title": "Drunkards & Alcoholics"
+        },
+        {
+          "episode_number": 6,
+          "title": "Three Kinds of Proposals"
+        },
+        {
+          "episode_number": 7,
+          "title": "The Stones of Notre Dame Cry Out"
+        },
+        {
+          "episode_number": 8,
+          "title": "Moses & the 10 Commandments"
+        },
+        {
+          "episode_number": 9,
+          "title": "Psychology & Psychiatry"
+        },
+        {
+          "episode_number": 10,
+          "title": "The Best Town in Which to Be Broke"
+        },
+        {
+          "episode_number": 11,
+          "title": "Should Parents Obey Children?"
+        },
+        {
+          "episode_number": 12,
+          "title": "Three Greatest Confessions of History"
+        },
+        {
+          "episode_number": 13,
+          "title": "Students Dissatisfied with Education"
+        },
+        {
+          "episode_number": 14,
+          "title": "How to Psychoanalyze Yourself"
+        }
+      ]
+    },
+    {
+      "season_number": 6,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "Ages of Man"
+        },
+        {
+          "episode_number": 2,
+          "title": "Amortization of Humanity"
+        },
+        {
+          "episode_number": 3,
+          "title": "Are We More Neurotic Today?"
+        },
+        {
+          "episode_number": 4,
+          "title": "A Tale of Two Cities"
+        },
+        {
+          "episode_number": 5,
+          "title": "Caring"
+        },
+        {
+          "episode_number": 6,
+          "title": "Divine Sense of Humor"
+        },
+        {
+          "episode_number": 7,
+          "title": "False Compassion"
+        },
+        {
+          "episode_number": 8,
+          "title": "Gloom, Laughter, and Humor"
+        },
+        {
+          "episode_number": 9,
+          "title": "Go, Go, Come, Come"
+        },
+        {
+          "episode_number": 10,
+          "title": "Guilt"
+        },
+        {
+          "episode_number": 11,
+          "title": "Happiness is a Rainbow"
+        },
+        {
+          "episode_number": 12,
+          "title": "Have You Been More Tempted Lately?"
+        },
+        {
+          "episode_number": 13,
+          "title": "He Always Tunes Me Out"
+        },
+        {
+          "episode_number": 14,
+          "title": "Intimacies of Love"
+        },
+        {
+          "episode_number": 15,
+          "title": "Is Alcoholism Just a Disease?"
+        },
+        {
+          "episode_number": 16,
+          "title": "Is Poverty or Property the Problem?"
+        },
+        {
+          "episode_number": 17,
+          "title": "Ladies and Gentlemen"
+        },
+        {
+          "episode_number": 18,
+          "title": "Loneliness"
+        },
+        {
+          "episode_number": 19,
+          "title": "Love is a Garden"
+        },
+        {
+          "episode_number": 20,
+          "title": "Love is a Many Splendored Thing"
+        },
+        {
+          "episode_number": 21,
+          "title": "Men Who Go Down to the Sea in Ships"
+        },
+        {
+          "episode_number": 22,
+          "title": "Of Course There is Incompatibility"
+        },
+        {
+          "episode_number": 23,
+          "title": "Preparing a Talk"
+        }
+      ]
+    },
+    {
+      "season_number": 7,
+      "episodes": [
+        {
+          "episode_number": 1,
+          "title": "Quo Vadis America"
+        },
+        {
+          "episode_number": 2,
+          "title": "Stop the World, I Want to Get On"
+        },
+        {
+          "episode_number": 3,
+          "title": "Superman and Christmas"
+        },
+        {
+          "episode_number": 4,
+          "title": "The 30th Parallel"
+        },
+        {
+          "episode_number": 5,
+          "title": "The Clown is Always Right"
+        },
+        {
+          "episode_number": 6,
+          "title": "The Cost to Kill a Man in War"
+        },
+        {
+          "episode_number": 7,
+          "title": "The Death of God"
+        },
+        {
+          "episode_number": 8,
+          "title": "The Eucharist"
+        },
+        {
+          "episode_number": 9,
+          "title": "The Glory of Being an American"
+        },
+        {
+          "episode_number": 10,
+          "title": "The Identity Crisis"
+        },
+        {
+          "episode_number": 11,
+          "title": "The Invisible Gardener"
+        },
+        {
+          "episode_number": 12,
+          "title": "The Kiss That Blistered"
+        },
+        {
+          "episode_number": 13,
+          "title": "The New Exodus"
+        },
+        {
+          "episode_number": 14,
+          "title": "The New Taboo"
+        },
+        {
+          "episode_number": 15,
+          "title": "The Psychology of Temptation"
+        },
+        {
+          "episode_number": 16,
+          "title": "There's Hope"
+        },
+        {
+          "episode_number": 17,
+          "title": "The Sex Revolution"
+        },
+        {
+          "episode_number": 18,
+          "title": "The Short Trip and The Long Pull"
+        },
+        {
+          "episode_number": 19,
+          "title": "The Touch of Your Hand"
+        },
+        {
+          "episode_number": 20,
+          "title": "Treasures of the Subconscious"
+        },
+        {
+          "episode_number": 21,
+          "title": "War Against Affluence"
+        },
+        {
+          "episode_number": 22,
+          "title": "We Are in Two Wars"
+        },
+        {
+          "episode_number": 23,
+          "title": "What Holds Us Together"
+        },
+        {
+          "episode_number": 24,
+          "title": "What is Man?"
+        }
+      ]
+    }
+  ]
+}
