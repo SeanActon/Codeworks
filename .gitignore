@@ -2,3 +2,11 @@
 /Python/YoutubeDownloader/config.json
 /Python/YoutubeDownloader/made videos/
 /Python/YoutubeDownloader/TempVideos/
+#Project-Sheen
+/Python/Project-Sheen/*/config.json
+/Python/Project-Sheen/MkvTranscriber/transcripts/
+/Python/Project-Sheen/agentic/episode_matches.json
+/Python/Project-Sheen/agentic/rename_manifest.json
+#PyCache
+__pycache__/
+*.py[cod]
