@@ -1,4 +1,4 @@
-"""Create local text and SRT transcripts from MKV video files."""
+"""Create local text and SRT transcripts from MKV and MP4 video files."""
 
 from __future__ import annotations
 
@@ -96,33 +96,35 @@ def load_config(config_path: Path) -> dict[str, Any]:
     ):
         raise ValueError("output_formats must be a non-empty list of 'txt' and/or 'srt'.")
     defaults["output_formats"] = list(dict.fromkeys(formats))
-    if not isinstance(defaults["output_dir"], str) or not defaults["output_dir"].strip():
-        raise ValueError("output_dir must be a non-empty path string.")
+    if defaults["output_dir"] is not None and (
+        not isinstance(defaults["output_dir"], str) or not defaults["output_dir"].strip()
+    ):
+        raise ValueError("output_dir must be a non-empty path string or null.")
     if type(defaults["workers"]) is not int or defaults["workers"] < 1:
         raise ValueError("workers must be a positive integer.")
     return defaults
 
 
-def find_mkv_files(inputs: list[Path]) -> list[Path]:
+def find_video_files(inputs: list[Path]) -> list[Path]:
     files: set[Path] = set()
     for input_path in inputs:
         if not input_path.exists():
             raise ValueError(f"Input path does not exist: {input_path}")
         if input_path.is_file():
-            if input_path.suffix.lower() != ".mkv":
-                raise ValueError(f"Input file is not an MKV: {input_path}")
+            if input_path.suffix.lower() not in {".mkv", ".mp4"}:
+                raise ValueError(f"Input file is not an MKV or MP4: {input_path}")
             files.add(input_path.resolve())
         elif input_path.is_dir():
             files.update(
                 path.resolve()
                 for path in input_path.rglob("*")
-                if path.is_file() and path.suffix.lower() == ".mkv"
+                if path.is_file() and path.suffix.lower() in {".mkv", ".mp4"}
             )
         else:
             raise ValueError(f"Input path is not a file or directory: {input_path}")
 
     if not files:
-        raise ValueError("No MKV files found in the supplied input paths.")
+        raise ValueError("No MKV or MP4 files found in the supplied input paths.")
     return sorted(files)
 
 
@@ -209,14 +211,14 @@ def transcribe(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Transcribe MKV files locally and save TXT/SRT transcripts."
+        description="Transcribe MKV and MP4 files locally and save TXT/SRT transcripts."
     )
     parser.add_argument(
         "input",
         nargs="*",
         type=Path,
         help=(
-            "Optional MKV files or directories (searched recursively); "
+            "Optional MKV/MP4 files or directories (searched recursively); "
             "defaults to input_paths in the config."
         ),
     )
@@ -234,7 +236,7 @@ def main() -> int:
     parser.add_argument(
         "--workers",
         type=int,
-        help="Number of MKV files to transcribe concurrently (defaults to config).",
+        help="Number of video files to transcribe concurrently (defaults to config).",
     )
     args = parser.parse_args()
 
@@ -258,12 +260,19 @@ def main() -> int:
                 "No input paths provided. Set input_paths in the config or pass "
                 "one or more file/folder paths."
             )
-        video_files = find_mkv_files(input_paths)
-        output_dir = Path(config["output_dir"])
-        if not output_dir.is_absolute():
-            output_dir = args.config.resolve().parent / output_dir
-
-        output_bases = [output_dir / f"{video_path.stem}" for video_path in video_files]
+        video_files = find_video_files(input_paths)
+        if config["output_dir"] is None:
+            output_bases = [
+                video_path.parent / "Subtitles" / video_path.stem
+                for video_path in video_files
+            ]
+        else:
+            output_dir = Path(config["output_dir"])
+            if not output_dir.is_absolute():
+                output_dir = args.config.resolve().parent / output_dir
+            output_bases = [
+                output_dir / f"{video_path.stem}" for video_path in video_files
+            ]
         if len(set(output_bases)) != len(output_bases):
             raise ValueError(
                 "Input files have duplicate names; use separate runs or distinct "

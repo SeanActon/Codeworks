@@ -1,6 +1,6 @@
-# MKV Transcriber
+# MKV/MP4 Transcriber
 
-Create plain-text and timestamped SRT transcripts from MKV videos using
+Create plain-text and timestamped SRT transcripts from MKV or MP4 videos using
 faster-whisper. Audio is transcribed locally; video content is not sent to a
 transcription service. The selected Whisper model is downloaded on first use.
 
@@ -13,8 +13,8 @@ transcription service. The selected Whisper model is downloaded on first use.
    python -m pip install -r requirements.txt
    ```
 
-3. Copy `config.example.json` to `config.json`, set `input_paths`, and adjust
-   the options. `config.json` is ignored by Git.
+3. Copy `config.example.json` to `config.json`, set `input_paths` to MKV/MP4
+   files or folders, and adjust the options. `config.json` is ignored by Git.
 4. Keep the installed PyAV version below 19. PyAV 19 removed an argument used
    by the faster-whisper audio decoder; the requirements file pins a compatible
    version. If transcription reports a PyAV compatibility error, rerun the
@@ -34,11 +34,12 @@ python main.py
 Each episode displays its own progress bar, advancing as speech segments are
 transcribed.
 
-Alternatively, pass one or more MKV files or folders on the command line to
+Alternatively, pass one or more MKV/MP4 files or folders on the command line to
 override `input_paths`. Folders are searched recursively:
 
 ```powershell
 python main.py "D:\Videos\episode.mkv"
+python main.py "D:\Videos\movie.mp4"
 python main.py "D:\Videos\Season 1"
 ```
 
@@ -63,18 +64,19 @@ overwritten.
 
 ## Settings
 
-- `input_paths`: paths to MKV files or folders to process by default; folders
-  are searched recursively. An empty list requires paths to be passed on the
-  command line.
+- `input_paths`: paths to MKV/MP4 files or folders to process by default;
+  folders are searched recursively. An empty list requires paths to be passed
+  on the command line.
 - `model`: `tiny`, `base`, `small`, `medium`, or `large-v3`. `small` is the
   default; larger models generally improve accuracy but need more resources.
 - `device`: `auto`, `cpu`, or `cuda`.
 - `compute_type`: `auto`, `int8`, `float16`, or `float32`.
 - `language`: language code such as `en`, or `null` to detect it automatically.
 - `output_dir`: transcript output folder, relative to this script folder or an
-  absolute path.
+  absolute path. Set to `null` to save each transcript in a `Subtitles` folder
+  beside its video.
 - `output_formats`: one or both of `txt` and `srt`.
-- `workers`: number of MKV files to transcribe concurrently; must be a positive
+- `workers`: number of video files to transcribe concurrently; must be a positive
   integer. The default is `1` (sequential processing).
 
 Model/device combinations depend on the installed hardware and runtime. For

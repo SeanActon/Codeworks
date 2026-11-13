@@ -10,3 +10,9 @@
 #PyCache
 __pycache__/
 *.py[cod]
+#plex logs
+/Python/PlexWatch/Plex-logs/*
+/Python/PlexWatch/plex_stops.log
+/Python/PlexWatch/plexwatch.log
+/Python/PlexWatch/plexwatch-errors.log
+/Python/PlexWatch/*
